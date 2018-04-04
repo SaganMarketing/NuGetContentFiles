@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Scripts\Utility.js">
+      <Pack>true</Pack>
+      <!--<PackagePath>contentFiles\all\all\wwwroot\js\;content\all\all\wwwroot\js\</PackagePath>-->
+      <PackagePath>contentFiles\all\all\wwwroot\js\</PackagePath>
+        <PackageCopyToOutput>true</PackageCopyToOutput>
+    </Content>
+  </ItemGroup>
+  <!--
+  <Target Name="CopyPackageFiles" BeforeTargets="GenerateNuspec">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)contentFiles\all\all\wwwroot\js\*.js" DestinationFolder="$(MSBuildProjectDirectory)\wwwroot\js\" />
+  </Target>
+  -->
+</Project>
