@@ -1,5 +1,4 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <Version>1.0.0</Version>
@@ -16,14 +15,8 @@
   <ItemGroup>
     <Content Include="Scripts\Utility.js">
       <Pack>true</Pack>
-      <!--<PackagePath>contentFiles\all\all\wwwroot\js\;content\all\all\wwwroot\js\</PackagePath>-->
-      <PackagePath>contentFiles\all\all\wwwroot\js\</PackagePath>
+      <PackagePath>contentFiles\any\any\wwwroot\js\;content\any\any\wwwroot\js\</PackagePath>
         <PackageCopyToOutput>true</PackageCopyToOutput>
     </Content>
   </ItemGroup>
-  <!--
-  <Target Name="CopyPackageFiles" BeforeTargets="GenerateNuspec">
-    <Copy SourceFiles="$(MSBuildThisFileDirectory)contentFiles\all\all\wwwroot\js\*.js" DestinationFolder="$(MSBuildProjectDirectory)\wwwroot\js\" />
-  </Target>
-  -->
 </Project>
