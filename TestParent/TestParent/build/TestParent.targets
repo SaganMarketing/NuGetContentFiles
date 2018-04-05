@@ -1,0 +1,9 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <SourceScriptFiles Include="\**\*.js" />
+    </ItemGroup>
+    <Target Name="CopyScriptsToProject" BeforeTargets="Build">
+        <Copy SourceFiles="@(SourceScriptFiles)" DestinationFolder="$(MSBuildProjectDirectory)\..\..\..\wwwroot\js\"
+        />
+    </Target>
+</Project>
